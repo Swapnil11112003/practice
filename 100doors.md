@@ -22,7 +22,7 @@ boolean [] doors = new boolean[100];
 
         for (int pass = 1; pass <= 100; pass++) 
             for (int index = 0; index < 100; index++) 
-                if((index + 1) % pass == 0)
+                if ((index + 1) % pass == 0)
                     doors[index] = !doors[index];
 
         for (int i = 0; i < 100; i++)
