@@ -1,6 +1,6 @@
 # Project Euler - 1: Multiples of 3 and 5 
 
-Calculates and prints the sum of all multiples of 3 and 5 below 1000
+> Calculates and prints the sum of all multiples of 3 and 5 below 1000
 
 ## Java 
 
