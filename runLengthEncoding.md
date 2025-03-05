@@ -4,27 +4,30 @@
 >
 > The output can be anything, as long as you can recreate the input with it.
 
-```java
-String str = "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW";
-String result = "";
+## Java
 
-for (int index = 0; index < str.length() - 1; ) {
-    int count = 1;
-    
-    for (int j = index + 1; j < str.length(); j++) {
-        if (Character.toString(str.charAt(j)).equals(Character.toString(str.charAt(index)))) {
+```java
+String str = "";
+String result = "";
+int count = 1;
+char currentChar = ' ';
+if (str.equals("")) {
+    System.out.println(result);
+}
+else {
+    for (int index = 0; index < str.length() - 1; index++) {
+        currentChar = str.charAt(index);
+        if (Character.toString(str.charAt(index + 1)).equals(Character.toString(str.charAt(index)))) 
             count++;
-            index++;
-        }
         else {
             result += String.valueOf(count);
             result += String.valueOf(str.charAt(index));
-            index = j;
             count = 1;
         }
     }
     result += String.valueOf(count);
-    result += String.valueOf(str.charAt(index));
-}
-System.out.println(result);
+    result += String.valueOf(currentChar);
+
+    System.out.println(result);
+    }
 ```
